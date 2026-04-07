@@ -1,0 +1,201 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<style>
+
+    /* ── CARRUSEL ── */
+    .carrusel {
+        position: relative;
+        width: 100%;
+        height: 520px;
+        overflow: hidden;
+    }
+
+        .carrusel img.fondo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+    /* ── CAJA DE TEXTO (entra desde la derecha hacia la izquierda) ── */
+    .caja-texto {
+        position: absolute;
+        top: 50%;
+        left: 12%;
+        transform: translateY(-50%) translateX(120px);
+        opacity: 0;
+        background-color: rgba(180, 200, 200, 0.55);
+        border: 3px solid white;
+        padding: 35px 40px;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        max-width: 380px;
+        animation: entraCaja 1s ease forwards 0.3s;
+    }
+
+    @@keyframes entraCaja {
+        to {
+            transform: translateY(-50%) translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /* ── BOTÓN ENTRAR (entra desde la izquierda hacia la derecha) ── */
+    .btn-entrar {
+        position: absolute;
+        bottom: 22%;
+        left: 12%;
+        transform: translateX(-120px);
+        opacity: 0;
+        background-color: #044454;
+        color: white;
+        padding: 14px 50px;
+        border: none;
+        border-radius: 30px;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        animation: entraBoton 1s ease forwards 0.6s;
+        transition: background-color 0.25s;
+    }
+
+        .btn-entrar:hover {
+            background-color: #043444;
+        }
+
+    @@keyframes entraBoton {
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /* ── SECCIÓN SERVICIOS ── */
+    .seccion-servicios {
+        padding: 50px 80px;
+        text-align: center;
+    }
+
+    /* Encabezado verde con borde amarillo */
+    .titulo-servicios {
+        background-color: #4a9e3f;
+        border: 3px solid #f0c030;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 12px 0;
+        margin: 0 auto 50px auto;
+        max-width: 780px;
+        letter-spacing: 1px;
+    }
+
+    /* Grilla de íconos: 3 columnas */
+    .grid-servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px 20px;
+        max-width: 780px;
+        margin: 0 auto 50px auto;
+    }
+
+    .servicio-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+        .servicio-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .servicio-item span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
+            line-height: 1.3;
+        }
+
+    /* ── BOTÓN MÁS SERVICIOS ── */
+    .btn-mas-servicios {
+        display: inline-block;
+        background-color: #4a9e3f;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 11px 32px;
+        border: 3px solid white;
+        border-radius: 4px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: border-radius 0.3s ease, background-color 0.25s;
+    }
+
+        .btn-mas-servicios:hover {
+            border-radius: 30px;
+            background-color: #3a8030;
+        }
+
+</style>
+
+<!-- ═══════════════════════════════════════ -->
+<!--              CARRUSEL                  -->
+<!-- ═══════════════════════════════════════ -->
+<div class="carrusel">
+    <img class="fondo" src="~/media/carrusel-img-1.jpeg" alt="Imagen principal CoopAFAMI" />
+    <div class="caja-texto">
+        conoce quiénes somos
+    </div>
+    <a href="#" class="btn-entrar">Entrar</a>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!--             SERVICIOS                  -->
+<!-- ═══════════════════════════════════════ -->
+<section class="seccion-servicios">
+
+    <div class="titulo-servicios">Servicios</div>
+
+    <div class="grid-servicios">
+
+        <div class="servicio-item">
+            <img src="~/media/Cuentas-de-Ahorro.png" alt="Cuentas de Ahorro" />
+            <span>Cuentas de Ahorro</span>
+        </div>
+
+        <div class="servicio-item">
+            <img src="~/media/Préstamos-Personales.png" alt="Préstamos Personales" />
+            <span>Préstamos Personales</span>
+        </div>
+
+        <div class="servicio-item">
+            <img src="~/media/Préstamos-Escolares.png" alt="Préstamos Escolares" />
+            <span>Préstamos Escolares</span>
+        </div>
+
+        <div class="servicio-item">
+            <img src="~/media/Préstamos-Hipotecario.png" alt="Préstamos Hipotecario" />
+            <span>Préstamos Hipotecario</span>
+        </div>
+
+        <div class="servicio-item">
+            <img src="~/media/Préstamos-Vehículo.png" alt="Préstamos Vehículo" />
+            <span>Préstamos Vehículo</span>
+        </div>
+
+        <div class="servicio-item">
+            <img src="~/media/Seguro-de-Vehículo.png" alt="Seguro de Vehículo" />
+            <span>Seguro de Vehículo</span>
+        </div>
+
+    </div>
+
+    <a href="#" class="btn-mas-servicios">Mas servicios</a>
+
+</section>
