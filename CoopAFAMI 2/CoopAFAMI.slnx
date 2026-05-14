@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="coopafami.client/coopafami.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="CoopAFAMI.Server/CoopAFAMI.Server.csproj" />
+</Solution>
