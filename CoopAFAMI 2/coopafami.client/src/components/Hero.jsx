@@ -1,21 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 /**
  * Componente Hero: La sección principal de bienvenida con imagen de fondo.
+ * Ahora utiliza Link para navegar hacia la sección de Quienes Somos.
  */
 const Hero = () => {
     return (
         <section className="hero-section">
-            {/* El fondo se pone mediante 'style' para poder usar la ruta de la imagen dinámica */}
             <div className="hero-background" style={{ backgroundImage: "url('/media/carrusel-img-1.jpeg')" }}>
                 <div className="hero-content">
-                    {/* Esta clase 'slide-in-left' dispara la animación que viene de la izquierda (definida en index.css) */}
                     <div className="conoce-box slide-in-left">
                         <h2>conoce quienes<br />somos</h2>
                     </div>
-
-                    {/* 'slide-in-left-delayed' hace lo mismo pero tarda 0.4 segundos más en empezar */}
-                    <a href="#" className="btn-entrar slide-in-left-delayed">Entrar</a>
+                    
+                    {/* El botón 'Entrar' ahora es un Link hacia /AboutUS */}
+                    <Link to="/AboutUS" className="btn-entrar slide-in-left-delayed">
+                        Entrar
+                    </Link>
                 </div>
             </div>
         </section>
