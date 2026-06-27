@@ -1,0 +1,48 @@
+.mainHeader {
+    background-color: var(--color-primary-green);
+    padding: 10px 20px;
+}
+
+.headerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoCircular {
+    height: 80px;
+}
+
+.logoText {
+    height: 35px;
+}
+
+.mainNav ul {
+    list-style: none;
+    display: flex;
+    gap: 0;
+}
+
+.mainNav a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 15px 25px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.mainNav a:hover,
+.mainNav a.active {
+    background-color: var(--color-text-light);
+    color: var(--color-primary-green);
+}

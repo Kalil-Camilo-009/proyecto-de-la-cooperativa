@@ -1,21 +1,30 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './Hero.module.css';
 
 /**
- * Componente Hero: La sección principal de bienvenida con imagen de fondo.
- * Ahora utiliza Link para navegar hacia la sección de Quienes Somos.
+ * Componente Hero (Sección de portada o banner de bienvenida).
+ * Muestra una imagen de portada representativa de la cooperativa y una llamada
+ * a la acción (botón "Entrar") animada que redirige a la sección de "Quiénes Somos".
+ *
+ * @component
+ * @returns {JSX.Element} La sección de portada del sitio web.
  */
 const Hero = () => {
     return (
-        <section className="hero-section">
-            <div className="hero-background" style={{ backgroundImage: "url('/media/carrusel-img-1.jpeg')" }}>
-                <div className="hero-content">
-                    <div className="conoce-box slide-in-left">
+        <section className={styles.heroSection}>
+            {/* Imagen de fondo configurada inline para dinamismo con fallback en CSS */}
+            <div 
+                className={styles.heroBackground} 
+                style={{ backgroundImage: "url('/media/carrusel-img-1.jpeg')" }}
+            >
+                <div className={styles.heroContent}>
+                    {/* Caja de texto principal animada con clase global "slide-in-left" */}
+                    <div className={`${styles.conoceBox} slide-in-left`}>
                         <h2>conoce quienes<br />somos</h2>
                     </div>
                     
-                    {/* El botón 'Entrar' ahora es un Link hacia /AboutUS */}
-                    <Link to="/AboutUS" className="btn-entrar slide-in-left-delayed">
+                    {/* Botón de navegación animado con clase global "slide-in-left-delayed" */}
+                    <Link to="/quienes-somos" className={`${styles.btnEntrar} slide-in-left-delayed`}>
                         Entrar
                     </Link>
                 </div>

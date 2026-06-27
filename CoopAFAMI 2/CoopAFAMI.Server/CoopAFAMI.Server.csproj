@@ -1,12 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <SpaRoot>..\coopafami.client</SpaRoot>
-    <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
-    <SpaProxyServerUrl>https://localhost:55197</SpaProxyServerUrl>
+    <SpaProxyLaunchCommand>cmd.exe /c npm run dev</SpaProxyLaunchCommand>
+    <SpaProxyServerUrl>http://localhost:5045</SpaProxyServerUrl>
   </PropertyGroup>
 
   <ItemGroup>

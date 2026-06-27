@@ -1,0 +1,124 @@
+.aboutUsSection {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.infoBlock {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+    text-align: left;
+}
+
+.infoBlock.reverse {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .infoBlock,
+    .infoBlock.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+.infoText {
+    flex: 1;
+}
+
+.infoText h3 {
+    font-size: 2.2rem;
+    color: var(--color-text-muted);
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.infoText p {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: var(--color-text-muted);
+    font-weight: bold;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .infoText p {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}
+
+.infoImage {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.infoImage img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Values Section */
+.valuesSection {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.valuesTitleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.valuesTitleContainer img {
+    height: 80px;
+}
+
+@media (max-width: 480px) {
+    .valuesTitleContainer img {
+        height: 50px;
+    }
+}
+
+.valuesTitleContainer h3 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--color-text-muted);
+}
+
+.valuesGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.valueItem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 480px) {
+    .valueItem {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.valueItem img {
+    height: 100px;
+}
+
+.valueItem span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--color-text-muted);
+}

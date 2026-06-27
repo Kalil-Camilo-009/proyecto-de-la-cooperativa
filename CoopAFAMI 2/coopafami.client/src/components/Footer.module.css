@@ -1,0 +1,12 @@
+.mainFooter {
+    background-color: var(--color-yellow);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.mainFooter p {
+    color: var(--color-text-light);
+    font-weight: bold;
+    font-size: 1rem;
+}

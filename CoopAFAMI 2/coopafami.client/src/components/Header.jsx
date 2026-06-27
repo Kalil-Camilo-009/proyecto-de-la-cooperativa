@@ -1,35 +1,75 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
+import styles from './Header.module.css';
 
 /**
- * Componente Header: Define la barra de navegación superior.
- * Ahora utiliza NavLink de react-router-dom para manejar las URLs y el estado activo.
+ * Componente Header de la barra de navegación superior.
+ * Proporciona enlaces a las secciones principales del sitio, con clases activas
+ * automáticas según el estado de la URL.
+ *
+ * @component
+ * @returns {JSX.Element} El encabezado con el logotipo y la barra de navegación.
  */
 const Header = () => {
     return (
-        <header className="main-header">
-            <div className="header-container">
-                <div className="logo-container">
-                    <img src="/media/logo-img-1.png" alt="Logo CoopAFAMI Circular" className="logo-circular" />
-                    <img src="/media/logo-img-2.png" alt="CoopAFAMI" className="logo-text" />
+        <header className={styles.mainHeader}>
+            <div className={styles.headerContainer}>
+                {/* Contenedor de logotipos */}
+                <div className={styles.logoContainer}>
+                    <img 
+                        src="/media/logo-img-1.png" 
+                        alt="Logo circular oficial de CoopAFAMI" 
+                        className={styles.logoCircular} 
+                    />
+                    <img 
+                        src="/media/logo-img-2.png" 
+                        alt="Texto CoopAFAMI" 
+                        className={styles.logoText} 
+                    />
                 </div>
                 
-                <nav className="main-nav">
+                {/* Menú de navegación principal */}
+                <nav className={styles.mainNav}>
                     <ul>
                         <li>
-                            {/* NavLink añade automáticamente la clase 'active' cuando la URL coincide */}
-                            <NavLink to="/home" className={({ isActive }) => isActive ? 'active' : ''}>
+                            <NavLink 
+                                to="/inicio" 
+                                className={({ isActive }) => isActive ? styles.active : ''}
+                            >
                                 Inicio
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/AboutUS" className={({ isActive }) => isActive ? 'active' : ''}>
+                            <NavLink 
+                                to="/quienes-somos" 
+                                className={({ isActive }) => isActive ? styles.active : ''}
+                            >
                                 Quienes somos
                             </NavLink>
                         </li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Actividades</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li>
+                            <NavLink 
+                                to="/servicios" 
+                                className={({ isActive }) => isActive ? styles.active : ''}
+                            >
+                                Servicios
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink 
+                                to="/actividades" 
+                                className={({ isActive }) => isActive ? styles.active : ''}
+                            >
+                                Actividades
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink 
+                                to="/contacto" 
+                                className={({ isActive }) => isActive ? styles.active : ''}
+                            >
+                                Contacto
+                            </NavLink>
+                        </li>
                     </ul>
                 </nav>
             </div>
