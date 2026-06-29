@@ -1,11 +1,80 @@
 .container {
-    min-height: 50vh;
-    padding: 80px 20px;
+    min-height: 70vh;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.notice {
-    font-size: 1.5rem;
-    margin-top: 40px;
-    color: var(--color-text-muted);
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.serviceItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.imageContainer {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.serviceIcon {
+    height: 120px;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.serviceItem:hover .serviceIcon {
+    transform: scale(1.08);
+}
+
+.serviceName {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--color-text-dark);
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Responsividad para pantallas medianas y pequeñas */
+@media (max-width: 1024px) {
+    .servicesGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 15px;
+    }
+    
+    .serviceIcon {
+        height: 100px;
+    }
+    
+    .imageContainer {
+        height: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        gap: 40px 10px;
+    }
 }

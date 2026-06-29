@@ -1,0 +1,144 @@
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #00a0ff;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.loginCard {
+    background-color: #ffffff;
+    border-radius: 40px;
+    border: 8px solid #bad80a; /* Borde verde/limón según mockup */
+    width: 100%;
+    max-width: 850px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.cardHeader {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cardHeader h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+}
+
+.cardBody {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logoSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoImage {
+    max-width: 90%;
+    height: auto;
+    object-fit: contain;
+}
+
+.formSection {
+    flex: 1.2;
+}
+
+.errorMessage {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.formGroup {
+    margin-bottom: 25px;
+}
+
+.formGroup label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border: 1px solid #7c7c7c;
+    border-radius: 30px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.formGroup input::placeholder {
+    color: #a0a0a0;
+}
+
+.formGroup input:focus {
+    border-color: #00a0ff;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 15px;
+    background-color: #094857; /* Azul marino/teal oscuro del botón */
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.submitButton:hover {
+    background-color: #06343f;
+}
+
+.submitButton:disabled {
+    background-color: #7f999f;
+    cursor: not-allowed;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .cardBody {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .logoSection {
+        order: 1;
+    }
+    
+    .formSection {
+        width: 100%;
+        order: 2;
+    }
+    
+    .loginCard {
+        border-radius: 20px;
+        padding: 30px 20px;
+        border-width: 5px;
+    }
+}

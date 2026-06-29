@@ -1,0 +1,6 @@
+cd "CoopAFAMI.Server"
+dotnet watch run
+
+
+cd "coopafami.client"
+npm run dev
