@@ -1,6 +1,35 @@
+🖥️ TERMINAL 1: Ejecutar el Backend (C#)
+Esta terminal enciende tu servidor de datos.
+
+1.Entra a la carpeta del servidor:
 cd "CoopAFAMI.Server"
+
+2.Enciende el proyecto en modo observación:
 dotnet watch run
 
+Asegúrate de mirar en qué puerto se ejecuta esta vez (asumimos que sigue siendo el 5045).
 
+🌐 TERMINAL 2: Ejecutar el Frontend (Vite / React o Angular)
+Esta terminal enciende la interfaz visual de tu página.
+
+1. Entra a la carpeta del cliente:
 cd "coopafami.client"
+
+2. Enciende el entorno de desarrollo:
 npm run dev
+
+☁️ TERMINAL 3: Crear el enlace público (ngrok)
+Una vez que el backend y el frontend estén corriendo y veas que tu página abre localmente, abre una tercera terminal y ejecuta el comando mágico que aprendimos hoy:
+
+ngrok http 5045 --host-header=localhost
+
+(Nota: Si en la Terminal 1 ves que el backend usó un puerto diferente al 5045, cambia ese número en este comando).
+
+🚀 ¿Qué haces después de ejecutar todo?
+En la Terminal 3, busca la línea que dice Forwarding y copia el enlace que termina en .ngrok-free.dev.
+
+Pégalo en tu navegador y agrégale /inicio al final (quedando algo como https://xxxx.ngrok-free.dev/inicio).
+
+Cuando entres tú o tus compañeros por primera vez, dale al botón azul "Visit Site" para saltar el aviso de seguridad de ngrok.
+
+¡Y listo! Ya con esto tienes tu "recetario de comandos" listo para cuando vuelvas a encender la laptop. ¡Mucho éxito con el proyecto de la cooperativa!
