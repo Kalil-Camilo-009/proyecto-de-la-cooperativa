@@ -23,7 +23,7 @@ Una vez que el backend y el frontend estén corriendo y veas que tu página abre
 
 ngrok http 5045 --host-header=localhost
 
-(Nota: Si en la Terminal 1 ves que el backend usó un puerto diferente al 5045, cambia ese número en este comando).
+(Nota: Si en la Terminal 2 ves que el frontend usó un puerto diferente al 5045, cambia ese número en este comando).
 
 🚀 ¿Qué haces después de ejecutar todo?
 En la Terminal 3, busca la línea que dice Forwarding y copia el enlace que termina en .ngrok-free.dev.

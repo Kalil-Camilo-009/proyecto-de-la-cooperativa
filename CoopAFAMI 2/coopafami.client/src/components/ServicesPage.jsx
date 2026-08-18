@@ -34,15 +34,15 @@ const ServicesPage = () => {
                     <h2>Servicios</h2>
                 </div>
             </div>
-            
+
             {/* Grid de servicios */}
             <div className={styles.servicesGrid}>
                 {services.map((service, index) => (
                     <div className={styles.serviceItem} key={index}>
                         <div className={styles.imageContainer}>
-                            <img 
-                                src={service.img} 
-                                alt={`Icono de ${service.name.replace('\n', ' ')}`} 
+                            <img
+                                src={service.img}
+                                alt={`Icono de ${service.name.replace('\n', ' ')}`}
                                 onError={handleImageError}
                                 className={styles.serviceIcon}
                             />
