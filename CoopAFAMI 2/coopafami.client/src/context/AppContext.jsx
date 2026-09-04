@@ -5,32 +5,14 @@ import { createContext, useContext, useState } from 'react';
 const AppContext = createContext();
 
 /**
- * Proveedor de Estado Global de la Aplicación.
- * Permite gestionar de manera centralizada la información que comparten
- * los distintos componentes (como autenticación de usuario, configuraciones, y
- * datos compartidos de actividades/servicios).
+ * Proveedor de Estado Global de la Aplicación Pública CoopAFAMI.
  */
 export function AppProvider({ children }) {
-    // Estado global de usuario (cargado de sessionStorage si existe para persistencia)
-    const [user, setUser] = useState(() => {
-        try {
-            const saved = sessionStorage.getItem('adminUser');
-            return saved ? JSON.parse(saved) : null;
-        } catch {
-            return null;
-        }
-    });
-
-    // Estado global para futuras actividades (el usuario mencionó que se desarrollará más adelante)
+    // Estado global para actividades o notificaciones públicas
     const [activities, setActivities] = useState([]);
-
-    // Estado para notificaciones o alertas globales
     const [notification, setNotification] = useState(null);
 
-    // Valores y funciones compartidas en el contexto
     const value = {
-        user,
-        setUser,
         activities,
         setActivities,
         notification,
