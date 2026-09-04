@@ -5,6 +5,7 @@ import Services from './components/Services';
 import ServicesPage from './components/ServicesPage';
 import AboutUs from './components/AboutUs';
 import ActivitiesPage from './components/ActivitiesPage';
+import Contacts from './components/contacts';
 import Login from './components/Login';
 import AdminDashboard from './components/AdminDashboard';
 import Footer from './components/Footer';
@@ -45,6 +46,9 @@ function AppContent() {
                     
                     {/* Ruta 'Actividades': Muestra la página de actividades y eventos */}
                     <Route path="/actividades" element={<ActivitiesPage />} />
+
+                    {/* Ruta 'Contacto': Muestra la página de contacto */}
+                    <Route path="/contacto" element={<Contacts />} />
 
                     {/* Ruta de Login para Administración */}
                     <Route path="/login" element={<Login />} />
